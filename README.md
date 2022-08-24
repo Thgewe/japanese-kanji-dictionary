@@ -11,6 +11,7 @@ Design taken from kanjikai.
 1. Add search by grades
 2. Redo store with Redux Toolkit
 3. Move the state higher in the level or in the store to cancel the loading of data when switching between pages
+4. Add dynamic paths to be able to switch between kanji using browser history
 
 ## Available Scripts
 

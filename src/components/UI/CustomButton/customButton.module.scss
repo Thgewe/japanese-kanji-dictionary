@@ -1,0 +1,21 @@
+@import '../../../styles/scss-breakpoints';
+
+.btn {
+  background-color: var(--color-primary);
+  width: 100%;
+  padding: 0.25rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @media screen and (#{$screen-tablet}) {
+    & {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.search {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  width: 100%;
+  & .button {
+    width: 8rem;
+    flex-basis: 8rem;
+    margin-bottom: 0.1rem;
+  }
+}

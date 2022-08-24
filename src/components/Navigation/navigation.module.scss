@@ -1,0 +1,21 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  & .route {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--color-highlight);
+    }
+  }
+  & .route + .route {
+    margin-left: 0.75em;
+  }
+
+  & .active {
+    color: var(--color-highlight);
+  }
+}

@@ -1,0 +1,14 @@
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  & .left {
+    font-weight: 600;
+  }
+  & .right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}

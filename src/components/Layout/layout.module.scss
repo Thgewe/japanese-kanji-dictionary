@@ -1,0 +1,35 @@
+@import '../../styles/scss-breakpoints';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  & .wrapper {
+    width: 100%;
+    max-width: var(--desktop-width);
+    padding-left: var(--padding-left-right-mobile);
+    padding-right: var(--padding-left-right-mobile);
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+  & .main {
+    width: 100%;
+    flex: 2;
+  }
+
+  @media screen and (#{$screen-tablet}) {
+    & .wrapper {
+      padding-left: var(--padding-left-right-tablet);
+      padding-right: var(--padding-left-right-tablet);
+    }
+  }
+  @media screen and (#{$screen-desktop}) {
+    & .wrapper {
+      padding-left: var(--padding-left-right-desktop);
+      padding-right: var(--padding-left-right-desktop);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../styles/scss-breakpoints';
+
+.kana {
+  font-family: var(--font-family-japanese);
+  font-size: var(--font-size-kana-default);
+  height: fit-content;
+  border-radius: 0.5rem;
+  padding: 0.125rem;
+  background-color: var(--color-kanji);
+  border: 1px dashed var(--color-border-kanji);
+  
+  @media screen and (#{$screen-tablet}) {
+    & {
+      font-size: var(--font-size-kana-tablet);
+    }
+  }
+}

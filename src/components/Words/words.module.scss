@@ -1,0 +1,16 @@
+.words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 0.625rem;
+
+  & .more {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  & .hide {
+    display: none;
+  }
+}

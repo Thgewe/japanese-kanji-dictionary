@@ -1,0 +1,27 @@
+@import '../../styles/scss-breakpoints';
+
+.page {
+  & .title {
+    color: var(--color-primary);
+    font-size: var(--font-size-h2-default);
+    margin: 0.5rem 0;
+  }
+  & .reading {
+    width: fit-content;
+  }
+  & .list {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media screen and (#{$screen-tablet}) {
+    & {
+      & .title {
+        font-size: var(--font-size-h2-tablet);
+      }
+    }
+  }
+}

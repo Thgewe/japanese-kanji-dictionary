@@ -1,0 +1,25 @@
+@import '../../styles/scss-breakpoints';
+
+.info {
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 30rem;
+  margin-bottom: 1rem;
+  & .left {
+    margin-right: 0.75rem;
+  }
+
+  & .right {
+    width: 13rem;
+  }
+
+  @media screen and (#{$screen-tablet}) {
+    & {
+      max-width: 40rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

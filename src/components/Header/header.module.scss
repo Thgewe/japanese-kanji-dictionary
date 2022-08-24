@@ -1,0 +1,58 @@
+@import '../../styles/scss-breakpoints';
+
+.header {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  margin-bottom: var(--margin-header-footer-default);
+
+  & .container {
+    margin: 0 auto;
+    max-width: var(--desktop-width);
+    height: 100%;
+    padding-left: var(--padding-left-right-mobile);
+    padding-right: var(--padding-left-right-mobile);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .title {
+    font-size: 2rem;
+    line-height: 110%;
+    font-family: var(--font-family-japanese);
+  }
+
+
+  @media screen and (#{$screen-tablet}) {
+    & {
+      height: 6rem;
+
+      & .container {
+        padding-left: var(--padding-left-right-tablet);
+        padding-right: var(--padding-left-right-tablet);
+        font-size: 1.5rem;
+      }
+
+      & .title {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  @media screen and (#{$screen-desktop}) {
+    & {
+      height: 6.5rem;
+
+      & .container {
+        padding-left: var(--padding-left-right-desktop);
+        padding-right: var(--padding-left-right-desktop);
+        font-size: 1.7rem;
+      }
+
+      & .title {
+        font-size: 3rem;
+      }
+    }
+  }
+}

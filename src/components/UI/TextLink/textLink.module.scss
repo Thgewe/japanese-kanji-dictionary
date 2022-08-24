@@ -1,0 +1,12 @@
+.link {
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: underline;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.dark {
+  color: var(--color-primary);
+}

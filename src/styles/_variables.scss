@@ -1,0 +1,49 @@
+:root {
+  // colors
+
+  --color-primary: #3D5A80;
+  --color-highlight: #FFBF00;
+  --color-error: #e63946;
+  --color-kanji-desired: #FFD166;
+  --color-border-kanji-desired: #d09a26;
+  --color-kanji: #bbd0ff;
+  --color-border-kanji: #6194ff;
+
+  --color-base-border: #646464;
+
+  --color-kun: #ffc6ff;
+  --color-on: #caffbf;
+  --color-nanori: #9bf6ff;
+
+  // breakpoints
+
+  --tablet-width: 768px;
+  --desktop-width: 1280px;
+
+  // sizes
+
+  --font-size-base: 16px;
+  --font-size-kana-default: 1.4rem;
+  --font-size-kana-tablet: 1.7rem;
+  --font-size-kanji-default: 2.25rem;
+  --font-size-kanji-tablet: 2.75rem;
+
+  --font-size-h1-default: 1.7rem;
+  --font-size-h1-tablet: 2rem;
+  --font-size-h2-default: 1.4rem;
+  --font-size-h2-tablet: 1.7rem;
+
+  // paddings
+
+  --padding-left-right-mobile: 1.25rem;
+  --padding-left-right-tablet: 1.8725rem;
+  --padding-left-right-desktop: 2.5rem;
+
+  // margins
+
+  --margin-header-footer-default: 1.25rem;
+
+  // fonts
+
+  --font-family-japanese: 'Kosugi Maru', sans-serif;
+}

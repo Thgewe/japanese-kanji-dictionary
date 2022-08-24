@@ -1,0 +1,12 @@
+@import '../../styles/scss-breakpoints';
+.word {
+  font-family: var(--font-family-japanese);
+  padding: 0.25rem;
+  font-size: var(--font-size-kana-default);
+
+  @media screen and (#{$screen-tablet}) {
+    & {
+      font-size: var(--font-size-kana-tablet);
+    }
+  }
+}

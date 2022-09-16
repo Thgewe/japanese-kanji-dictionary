@@ -48,7 +48,6 @@ const KanjiPage = () => {
 
     return (
         <div className={cl.page}>
-            <button onClick={() => navigate(+1)}>asd</button>
             <SearchBlock label={'Search kanji'}/>
             {error
                 ? <Error text={error}/>

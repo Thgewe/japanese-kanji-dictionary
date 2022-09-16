@@ -2,26 +2,29 @@ import React, {useState} from 'react';
 import cl from './searchBlock.module.scss';
 import SearchInput from "../UI/SearchInput/SearchInput";
 import {useDispatch} from "react-redux";
-import {changeReadingReducer} from "../../store/readingReducer";
+import {changeReadingAction} from "../../store/readingReducer";
 import {changeKanjiAction} from "../../store/kanjiCharReducer";
 import CustomButton from "../UI/CustomButton/CustomButton";
 import {setKanjiInLocalStorage, setReadingInLocalStorage} from "../../utils/setLocalStorage";
+import {useNavigate} from "react-router-dom";
 
 const SearchBlock = ({label, reading = false}) => {
 
     const [value, setValue] = useState('')
-
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const find = () => {
         if (value === '') return
 
         if (reading) {
             setReadingInLocalStorage({reading: value, type: 'searched'})
-            dispatch(changeReadingReducer({type: 'searched', reading: value}))
+            dispatch(changeReadingAction({type: 'searched', reading: value}))
+            navigate(value)
         } else {
             setKanjiInLocalStorage(value)
             dispatch(changeKanjiAction(value))
+            navigate(value)
         }
     }
 

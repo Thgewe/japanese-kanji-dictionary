@@ -8,6 +8,7 @@ import Meaning from "../Meaning/Meaning";
 import KanaWord from "../KanaWord/KanaWord";
 import WordLine from "../WordLine/WordLine";
 import CustomButton from "../UI/CustomButton/CustomButton";
+import uniqid from 'uniqid';
 
 const Words = ({kanji}) => {
 
@@ -55,9 +56,9 @@ const Words = ({kanji}) => {
         return <Loader />
 
     const wordsLimitedJSX = wordsLimited.map((word, i) => {
-        const variants = word?.variants.map((variant) => <KanjiWord word={variant.written}/>)
-        const meanings = word?.meanings.map((meaning, i) => <Meaning meaning={i + 1 + '. ' + meaning.glosses.join(', ')}/>)
-        return <WordLine left={variants} right={
+        const variants = word?.variants.map((variant) => <KanjiWord word={variant.written} key={uniqid()}/>)
+        const meanings = word?.meanings.map((meaning, i) => <Meaning meaning={i + 1 + '. ' + meaning.glosses.join(', ')} key={uniqid()}/>)
+        return <WordLine key={uniqid()} left={variants} right={
                     <>
                         <KanaWord word={word?.variants[0].pronounced}/>
                         {meanings}

@@ -2,18 +2,33 @@ import {ABOUT_ROUTE, KANJI_ROUTE, READING_ROUTE} from "./utils/constants";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import KanjiPage from "./pages/KanjiPage/KanjiPage";
 import ReadingPage from "./pages/ReadingPage/ReadingPage";
+import KanjiPageNested from "./components/KanjiPageNested";
+import ReadingPageNested from "./components/ReadingPageNested";
+
 
 export const routes = [
     {
         path: ABOUT_ROUTE,
-        component: <AboutPage />
+        name: 'about',
+        component: <AboutPage />,
+        nested: false,
     },
     {
         path: KANJI_ROUTE,
-        component: <KanjiPage />
+        name: 'kanji',
+        component: <KanjiPage />,
+        nested: {
+            path: ':kanjiId',
+            component: <KanjiPageNested />
+        }
     },
     {
         path: READING_ROUTE,
-        component: <ReadingPage />
+        name: 'reading',
+        component: <ReadingPage />,
+        nested: {
+            path: ':readingId',
+            component: <ReadingPageNested />
+        }
     }
 ]

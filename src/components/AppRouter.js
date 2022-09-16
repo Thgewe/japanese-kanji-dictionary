@@ -6,8 +6,12 @@ import {ABOUT_ROUTE} from "../utils/constants";
 const AppRouter = () => {
     return (
         <Routes>
-            {routes.map(({path, component}) =>
-                <Route path={path} element={component} exact={true} key={path}/>
+            {routes.map(({path, component, nested}) =>
+                <Route path={path} element={component} key={path}>
+                    nested
+                        ? <Route path={nested.path} element={nested.component}/>
+                        : null
+                </Route>
             )}
             <Route path={'*'} element={<Navigate to={ABOUT_ROUTE} replace={true}/>}/>
         </Routes>

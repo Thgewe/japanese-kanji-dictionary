@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from './reading.module.scss';
 import {useDispatch, useSelector} from "react-redux";
-import {changeReadingReducer} from "../../store/readingReducer";
+import {changeReadingAction} from "../../store/readingReducer";
 import {useLocation, useNavigate} from "react-router-dom";
 import {setReadingInLocalStorage} from "../../utils/setLocalStorage";
 
@@ -10,7 +10,7 @@ const Reading = ({type, text, big = false}) => {
     let textClass = big ? cl.big : '';
 
     const dispatch = useDispatch()
-    const navigation = useNavigate()
+    const navigate = useNavigate()
     const location = useLocation()
     const current = useSelector(state => state.reading)
 
@@ -40,7 +40,7 @@ const Reading = ({type, text, big = false}) => {
 
         // If you are on the wrong page
         if (text === current.reading) {
-            navigation('/reading')
+            navigate('/reading/' + text)
             return
         }
 
@@ -49,8 +49,8 @@ const Reading = ({type, text, big = false}) => {
             type: type,
         }
         setReadingInLocalStorage(newReading)
-        dispatch(changeReadingReducer(newReading))
-        navigation('/reading')
+        dispatch(changeReadingAction(newReading))
+        navigate('/reading/' + text)
     }
 
     return (

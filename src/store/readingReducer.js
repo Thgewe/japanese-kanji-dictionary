@@ -14,4 +14,4 @@ export const readingReducer = (state = defaultState, action) => {
     }
 }
 
-export const changeReadingReducer = (newReading) => ({type: CHANGE_READING, payload: newReading})
+export const changeReadingAction = (newReading) => ({type: CHANGE_READING, payload: newReading})

@@ -2,8 +2,9 @@ import React from 'react';
 import cl from './kanjiCharacter.module.scss';
 import {useDispatch} from "react-redux";
 import {changeKanjiAction} from "../../store/kanjiCharReducer";
-import {useNavigate} from "react-router-dom";
 import {setKanjiInLocalStorage} from "../../utils/setLocalStorage";
+import {useNavigate} from "react-router-dom";
+import {KANJI_ROUTE} from "../../utils/constants";
 
 const KanjiCharacter = ({value, desired = false, main = false}) => {
 
@@ -22,7 +23,7 @@ const KanjiCharacter = ({value, desired = false, main = false}) => {
 
         setKanjiInLocalStorage(value)
         dispatch(changeKanjiAction(value))
-        navigate('/kanji')
+        navigate(KANJI_ROUTE + '/' + value)
     }
 
     return (
